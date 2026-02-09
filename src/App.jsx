@@ -65,7 +65,7 @@ function App() {
               )}
               <br /><br />
               <TodaysHighlights data={data} />
-              {/* <Footer /> */}
+              <Footer />
             </>
           )}
         </div>
