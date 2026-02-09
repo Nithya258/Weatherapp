@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+.nav {
+    background: #1d1d1d;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.hourly {
+    background: #000;
+    padding: 5px;
+    margin: 15px;
+}
+
+.highlights {
+    background: #000;
+    padding: 5px;
+    margin: 15px;
+}
+
+.heading {
+    background: #161616;
+    padding: 1px;
+    margin: 5px;
+}
+
+.hovering:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.week {
+    padding: 10px;
+    background: #000;
+    margin: 1px;
+}
+
+
+
+
+
+
+
+
+
+
