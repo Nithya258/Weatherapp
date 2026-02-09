@@ -3,7 +3,7 @@ const getPm25Status = (pm) => {
   if (pm <= 35.4) return "Moderate";
   if (pm <= 55.4) return "Unhealthy for Sensitive Groups";
   if (pm <= 150.4) return "Unhealthy";
-  return "Hazardous";
+  return "khatam";
 };
 
 const AirQuality = ({ pm2p5 }) => {
