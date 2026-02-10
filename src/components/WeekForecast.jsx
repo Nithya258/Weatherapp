@@ -22,7 +22,7 @@ const WeekForecast = ({ data, tempUnit }) => {
         {weekDays.map((day, index) => {
           const { icon } = getWeatherAssets(day.icon);
           const date = new Date(day.datetime);
-          const dayName = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short' });
+          const dayName = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'long' });
 
           return (
             // <div key={index} className="week bg-white/5 rounded-xl p-3 md:p-4 text-center">

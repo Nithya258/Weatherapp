@@ -2,8 +2,19 @@
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { getWeatherAssets } from '../utils/weatherConfig';
 
+
 const WeatherCard = ({ data, tempUnit, compact = false }) => {
   if (!data) return null;
+
+
+
+console.log("Full data object:", data);
+
+const conditionText = data.currentConditions.conditions;
+console.log(conditionText); 
+// 
+
+
 
   const currentCondition = data.currentConditions.icon;
   const { icon } = getWeatherAssets(currentCondition);
@@ -19,36 +30,51 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
   if (compact) {
     return (
       <>
-      <div className='side'>
-        <div className=" flex justify-center">
-          <img
-            src={icon}
-            alt="weather"
-            className="w-10 h-10 md:w-12 md:h-12"
-          />
-        </div>
-
-        <div className="text-yellow-200 text-center mt-4 md:mt-6 flex-1">
-          <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold mb-3">
-            {convertTemp(data.currentConditions.temp)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
-          </h1>
-
-          <div className="flex flex-col gap-1 mb-4 lg:text-3xl 2md:text-sm">
-            <p>{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</p>
-            <p>{currentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
+        <div className='side'>
+          <div className=" flex justify-center">
+            <img
+              src={icon}
+              alt="weather"
+              className="lg:w-48 lg:h-48  md:w-12 md:h-12 bg-blue-200 "
+            />
           </div>
+          <br />
 
-          <div className="flex flex-col items-center gap-3 md:gap-5 mb-6">
-            {/* <p className=" text-xs md:text-sm  lg:text-2xl  capitalize">{data.currentConditions.conditions}</p> */}
-          <p class="text-xs md:text-sm lg:text-2xl capitalize">Partly Cloudy</p>
 
+          <div className="text-yellow-200 text-center mt-4 md:mt-6 flex-1 text-left">
+            <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold mb-3"><br />
+              {convertTemp(data.currentConditions.temp)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
+            </h1><br />
+
+            <div className="flex flex-row gap-1 mb-4 lg:text-xl 2md:text-sm ">
+              <p>{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</p> br <br />
+              <p>{currentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
+            </div>
+            <br /><hr />
+
+            <div className="flex flex-row items-center gap-3 md:gap-5 mb-6">
+              {/* <p className=" text-xs md:text-sm  lg:text-2xl  capitalize">{data.currentConditions.conditions}</p> */}
+              {/* <p class="text-xs md:text-sm lg:text-2xl capitalize">{data.conditions}%</p> */}
+
+
+
+         
+          <p className="text-white text-xl md:text-2xl font-bold capitalize">
+  {data.currentConditions.conditions}
+</p>
+
+
+
+
+
+
+            </div>
+
+            <p className="flex text-xs lg:text-2xl gap-2 px-2 mt-2 ">
+             
+              <span className="break-words">{data.resolvedAddress}</span>
+            </p>
           </div>
-
-          <p className="text-xs flex items-center  lg:text-2xl justify-center gap-2 px-2 mt-2">
-            <FaMapMarkerAlt className="flex-shrink-0  iconmap" />
-            <span className="break-words">{data.resolvedAddress}</span>
-          </p>
-        </div>
         </div>
       </>
     );

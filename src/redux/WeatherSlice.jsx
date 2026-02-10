@@ -10,7 +10,7 @@ export const fetchWeather = createAsyncThunk(
   'weather/fetchWeather',
   async (city) => {
     const response = await axios.get(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&contentType=json&elements=datetime,temp,visibility,tempmax,tempmin,humidity,windspeed,winddir,pressure,cloudcover,icon,sunrise,sunset,uvindex,aqius,pm2p5,pm10,o3,no2,so2,co&key=${API_KEY}`
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&contentType=json&elements=datetime,temp,visibility,tempmax,tempmin,humidity,windspeed,winddir,pressure,cloudcover,icon,sunrise,sunset,conditions,uvindex,aqius,pm2p5,pm10,o3,no2,so2,co&key=${API_KEY}`
     );
     return response.data;
   }

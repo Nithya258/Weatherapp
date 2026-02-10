@@ -19,7 +19,7 @@ function App() {
   const [tempUnit, setTempUnit] = useState('celsius');
 
   useEffect(() => {
-    dispatch(fetchWeather('marthahalli'));
+    dispatch(fetchWeather('mukthinath'));
   }, [dispatch]);
 
   const backgroundImage = data
@@ -31,11 +31,11 @@ function App() {
       className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="min-h-screen bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-sm flex flex-col md:flex-row">
+      <div className="min-h-screen bg-gradient-to-b from-black/40 to-black/60 flex flex-col md:flex-row">
 
         <Sidebar />
 
-        <div className="w-full md:w-8/12 lg:w-9/12 p-4 md:p-6 lg:p-8 overflow-y-auto">
+        <div className="w-full md:w-10/12 lg:w-10/12 p-4 md:p-6 lg:p-8 overflow-y-auto">
 
           {loading && (
             <div className="text-white text-center text-xl md:text-2xl">Loading...</div>
@@ -60,7 +60,11 @@ function App() {
 
               {activeTab === 'today' ? (
                 <HourlyForecast data={data} tempUnit={tempUnit} />
+                // <WeekForecast data={data} tempUnit={tempUnit} />
+
               ) : (
+                // <HourlyForecast data={data} tempUnit={tempUnit} />
+
                 <WeekForecast data={data} tempUnit={tempUnit} />
               )}
               <br /><br />
