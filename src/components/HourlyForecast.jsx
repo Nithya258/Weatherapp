@@ -14,12 +14,12 @@ const HourlyForecast = ({ data, tempUnit }) => {
   };
 
   return (
-    <div className="hourly bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 mb-6">
+    <div className="hourly  rounded-2xl p-4 md:p-6 mb-6">
       <h2 className="text-white text-xl md:text-2xl font-semibold mb-4 md:mb-6">
         Today's Hourly Forecast
       </h2><br />
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 md:gap-4">
+      <div className=" hourcards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 md:gap-4">
         {hourlyData.map((hour, index) => {
           const { icon } = getWeatherAssets(hour.icon);
           const time = hour.datetime.slice(0, 5);

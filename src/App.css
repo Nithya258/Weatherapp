@@ -11,14 +11,36 @@
     border-radius: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    padding: 8px;
+    padding: 20px;
     margin-bottom: 20px;
+    /* border-radius: 20px; */
+}
+.navbut{
+    background: #ffffff;
+    padding: 7px;
+    font-size: larger;
+    color: black;
+    font: bolder;
+    border-radius: 15px;
+}
+.navbut:hover{
+    background: #ff0000;
 }
 
 .hourly {
     background: #000;
     padding: 5px;
     margin: 15px;
+}
+.sevenday{
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+.sevencards{
+    background:transparent;
+    padding: 10px;
+    
 }
 
 .highlights {
@@ -33,15 +55,25 @@
     margin: 5px;
 }
 
-.hovering:hover {
-    background-color: rgb(255, 0, 0);
+
+.hourly{
+    background: #0e0e0e;
+
+}
+.hourcards{
+     background: #353535;
+      padding: 10px;
+         margin: 1px;
 }
 
 .week {
     padding: 10px;
-    background: #000;
+    background: #353535;
     margin: 1px;
 }
+/* .address{
+    background: #000000;
+} */
 
 .searchbar {
     /* background: #e03e3e; */
@@ -49,6 +81,7 @@
     margin-left: 60px;
     height: 50px;
     border-radius: 10px;
+    
 
 
 
@@ -77,11 +110,10 @@
             rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    /* Safari support */
+
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* margin: 20px; */
-    /* padding-left: 20px; */
+
 }
 
 .sidetext {
@@ -90,13 +122,27 @@
     margin-left: 10px;
 
 }
+.nav{
+    background: #191919;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 25px;
+    
+}
+.butonnav{
+    /* background: #ff0000; */
+}
 
-.sidemain {}
+
+
 
 input {
     /* background: red; */
     height: 50px;
     border-radius: 10px;
+    background: #000000;
+    color: white;
 }
 
 .weekicon {

@@ -62,7 +62,7 @@ const Sidebar = () => {
             type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
-            placeholder="Search city..."
+            placeholder=" Search city..."
             className=" searchinput w-full pl-20 pr-20 py-6 rounded-lg bg-white/10 backdrop-blur-md text-white outline-none focus:ring-2 focus:ring-white/40 text-2xl placeholder:text-white/50"
           />
 
@@ -97,10 +97,10 @@ const Sidebar = () => {
         <WeatherCard data={data} tempUnit={tempUnit} compact={true} />
 
 
-        {/* <div className="flex items-center justify-center gap-2 bg-red-500 mt-2">
-          <FaMapMarkerAlt />
-          <span>Current location</span>
-        </div> */}
+         <div className="flex items-center justify-center gap-2 bg-red-500 mt-2">
+          {/* <FaMapMarkerAlt />
+          <span>Current location</span> */}
+        </div> 
 <br /><br /><br /><br />
 
         {/* <div className="flex items-center justify-center gap-2 bg-blue-900 rounded-lg hover:bg-red-500

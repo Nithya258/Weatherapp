@@ -44,16 +44,17 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
           <br />
 
 
-          <div className="  text-gray-900 text-center mt-4 md:mt-6 flex-1 text-left">
+          <div className="  text-white text-center mt-4 md:mt-6 flex-1 text-left">
             <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold mb-3"><br />
               {convertTemp(data.currentConditions.temp)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
             </h1><br />
 
             <div className=" flex flex-row gap-1 mb-4 lg:text-xl 2md:text-sm ">
-              <p className=''>{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</p>  <br />
+              <p className=''>{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</p> <br />
               <p>{currentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
             </div>
-            <br /><hr />
+            <br />
+          
 
             <div className="flex flex-row items-center gap-3 md:gap-5 mb-6">
               {/* <p className=" text-xs md:text-sm  lg:text-2xl  capitalize">{data.currentConditions.conditions}</p> */}
@@ -62,7 +63,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
 
 
-              <p className="text-white text-xl md:text-2xl font-bold capitalize bg-gray-900 w-full">
+              <p className=" sidebelow  text-white text-xl md:text-2xl font-bold capitalize bg-gray-900 w-full">
                 {data.currentConditions.conditions}
               </p>
 
@@ -72,8 +73,8 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
 
             </div>
-            <br />
-            <p className="flex text-xl text-orange-500 lg:text-2xl gap-2 px-2 mt-2  bg-gray-900">
+            <br /> <br /><br /><br />
+            <p className=" address flex text-xl text-orange-500 lg:text-2xl gap-2 px-2 mt-2  bg-gray-900">
               <FaMapMarkerAlt /> <br />
               <span className="break-words">{data.resolvedAddress}</span>
 
@@ -85,7 +86,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
     );
   }
 
- 
+
 };
 
 export default WeatherCard;

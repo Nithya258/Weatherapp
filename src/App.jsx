@@ -68,8 +68,9 @@ function App() {
 
                   <WeekForecast data={data} tempUnit={tempUnit} />
                 )}
-                <br /><br />
+                <br /><br /> <br /><br /><br /> <br /><br />
                 <TodaysHighlights data={data} />
+                <br /><br />
                 <Footer />
               </>
             )}

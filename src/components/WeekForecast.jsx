@@ -13,12 +13,12 @@ const WeekForecast = ({ data, tempUnit }) => {
   };
 
   return (
-    <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 md:p-6 mb-8">
-      <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">
+    <div className="sevenday  backdrop-blur-md rounded-2xl p-4 md:p-6 mb-8">
+      <h2 className=" text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6">
         7 Days Forecast
       </h2>
 
-      <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
+      <div className=" sevencards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
         {weekDays.map((day, index) => {
           const { icon } = getWeatherAssets(day.icon);
           const date = new Date(day.datetime);
