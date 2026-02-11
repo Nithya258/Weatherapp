@@ -2,7 +2,8 @@
 
 
 .body {
-    background: #000;
+    /* background: #000; */
+  
 }
 
 .nav {
@@ -43,7 +44,7 @@
 }
 
 .searchbar {
-    background: #3e4be0;
+    background: #e03e3e;
     margin-top: 30px;
     margin-left: 60px;
     height: 50px;
@@ -59,6 +60,8 @@
     /* Safari support */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    /* margin: 20px; */
+    /* padding-left: 20px; */
 }
 
 input {
@@ -77,4 +80,43 @@ input {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+
+/*  */
+/* Mobile */
+@media (max-width: 767px) {
+  .searchbar {
+    width: 70%;
+ 
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .searchbar {
+font-size: 1.1rem;
+ transform: translate(-35px);
+  }
+   .searchinput{
+        font-size: 0.8rem;
+    }
+    .btn{
+        font-size: 0.9rem;
+    }
+}
+
+/* Laptop & Desktop */
+@media (min-width: 1024px) {
+  .searchbar {
+    width: 70%;
+    font-size: 0.9rem;
+    transform: translate(-25px);
+
+   
+  }
+   .searchinput{
+        font-size: 1.2rem;
+    }
 }

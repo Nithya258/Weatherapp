@@ -1,7 +1,7 @@
 
 // import { FaMapMarkerAlt } from 'react-icons/fa';
 import { getWeatherAssets } from '../utils/weatherConfig';
-// import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 
 const WeatherCard = ({ data, tempUnit, compact = false }) => {
@@ -72,10 +72,12 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
 
             </div>
-
+            <br />
             <p className="flex text-xs lg:text-2xl gap-2 px-2 mt-2 ">
-
+              <FaMapMarkerAlt /> <br />
               <span className="break-words">{data.resolvedAddress}</span>
+
+
             </p>
           </div>
         </div>
@@ -85,9 +87,11 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
   return (
     <>
-      <h2 className="flex items-center justify-center text-xl md:text-2xl text-yellow-200 mt-2">
+
+      <h1 className="flex items-center justify-center text-xl md:text-xl text-white font-bold mt-2">
         WEATHER FORECAST
-      </h2>
+      </h1>
+
 
     </>
 

@@ -27,7 +27,7 @@ function App() {
     : 'https://i.ibb.co/qNv7NxZ/pc.webp';
 
   return (
-
+    <div>
       <div
         className="min-h-screen bg-cover bg-center bg-no-repeat  gap "
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -76,7 +76,7 @@ function App() {
           </div>
         </div>
       </div>
-
+    </div>
   );
 }
 

@@ -25,7 +25,7 @@ const Sidebar = () => {
   return (
 
     <>
-      <div className=" container w-full md:w-3/12 lg:w-3/12 min-h-screen bg-gradient-to-b from-blue-900/90 to-blue-950/60  flex flex-col ">
+      <div className=" container w-full md:w-3/12 lg:w-3/12 min-h-screen bg-gradient-to-b from-blue-900/90 to-blue-950/60  flex flex-col  ">
         {/* 
       <h2 className="flex justify-center items-center text-white text-xl md:text-2xl font-bold mb-4 md:mb-6 ">
         EXPLORE
@@ -63,14 +63,14 @@ const Sidebar = () => {
             value={city}
             onChange={(e) => setCity(e.target.value)}
             placeholder="Search city..."
-            className="w-full pl-20 pr-20 py-6 rounded-lg bg-white/10 backdrop-blur-md text-white outline-none focus:ring-2 focus:ring-white/40 text-2xl placeholder:text-white/50"
+            className=" searchinput w-full pl-20 pr-20 py-6 rounded-lg bg-white/10 backdrop-blur-md text-white outline-none focus:ring-2 focus:ring-white/40 text-2xl placeholder:text-white/50"
           />
 
           {/* Clear Input */}
           <button
             type="button"
             onClick={() => setCity('')}
-            className="absolute right-10 top-1/2 -translate-y-1/2 p-2 hover:bg-white/10 rounded-lg transition-all"
+            className=" btn absolute right-10 top-1/2 -translate-y-1/2 p-2 hover:bg-white/10 rounded-lg transition-all"
           >
             <FaX className="text-red-200" />
           </button>
@@ -78,7 +78,7 @@ const Sidebar = () => {
           {/* Search Button */}
           <button
             type="submit"
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 hover:bg-white/10 rounded-lg transition-all"
+            className=" btn  absolute right-2 top-1/2 -translate-y-1/2 p-2 hover:bg-white/10 rounded-lg transition-all"
           >
             <FaSearch className="text-white" />
 
@@ -101,15 +101,18 @@ const Sidebar = () => {
           <FaMapMarkerAlt />
           <span>Current location</span>
         </div> */}
+<br /><br /><br /><br />
 
-
-        <div className="flex items-center justify-center gap-2 bg-red-500 mt-6">
+        <div className="flex items-center justify-center gap-2 bg-blue-900 rounded-lg hover:bg-red-500
+ mt-6">
           <FaMapMarkerAlt />
+          <br /> 
           <span>Current location</span>
         </div>
 
 
       </div>
+      <br /><br />
     </>
   );
 };
