@@ -18,7 +18,7 @@ const WeekForecast = ({ data, tempUnit }) => {
         7 Days Forecast
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
+      <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
         {weekDays.map((day, index) => {
           const { icon } = getWeatherAssets(day.icon);
           const date = new Date(day.datetime);

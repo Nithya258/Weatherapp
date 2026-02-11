@@ -103,12 +103,12 @@ const Sidebar = () => {
         </div> */}
 <br /><br /><br /><br />
 
-        <div className="flex items-center justify-center gap-2 bg-blue-900 rounded-lg hover:bg-red-500
- mt-6">
-          <FaMapMarkerAlt />
+        {/* <div className="flex items-center justify-center gap-2 bg-blue-900 rounded-lg hover:bg-red-500
+ mt-6"> */}
+          {/* <FaMapMarkerAlt /> */}
           <br /> 
-          <span>Current location</span>
-        </div>
+          {/* <span>Current location</span> */}
+        {/* </div> */}
 
 
       </div>

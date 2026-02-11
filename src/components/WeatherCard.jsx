@@ -36,7 +36,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
             <img
               src={icon}
               alt="weather"
-              className="lg:w-70 lg:h-80  md:w-30 md:h-27 sm:w-10 sm:h-10  bg-red-200 "
+              className=" displayicon lg:w-70 lg:h-80  md:w-30 md:h-27 sm:w-10 sm:h-10  "
 
 
             />
@@ -44,13 +44,13 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
           <br />
 
 
-          <div className="text-yellow-200 text-center mt-4 md:mt-6 flex-1 text-left">
+          <div className="  text-gray-900 text-center mt-4 md:mt-6 flex-1 text-left">
             <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold mb-3"><br />
               {convertTemp(data.currentConditions.temp)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
             </h1><br />
 
-            <div className="flex flex-row gap-1 mb-4 lg:text-xl 2md:text-sm ">
-              <p>{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</p> br <br />
+            <div className=" flex flex-row gap-1 mb-4 lg:text-xl 2md:text-sm ">
+              <p className=''>{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</p>  <br />
               <p>{currentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
             </div>
             <br /><hr />
@@ -62,7 +62,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
 
 
-              <p className="text-white text-xl md:text-2xl font-bold capitalize">
+              <p className="text-white text-xl md:text-2xl font-bold capitalize bg-gray-900 w-full">
                 {data.currentConditions.conditions}
               </p>
 
@@ -73,7 +73,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
             </div>
             <br />
-            <p className="flex text-xs lg:text-2xl gap-2 px-2 mt-2 ">
+            <p className="flex text-xl text-orange-500 lg:text-2xl gap-2 px-2 mt-2  bg-gray-900">
               <FaMapMarkerAlt /> <br />
               <span className="break-words">{data.resolvedAddress}</span>
 
@@ -85,17 +85,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
     );
   }
 
-  return (
-    <>
-
-      <h1 className="flex items-center justify-center text-xl md:text-xl text-white font-bold mt-2">
-        WEATHER FORECAST
-      </h1>
-
-
-    </>
-
-  );
+ 
 };
 
 export default WeatherCard;

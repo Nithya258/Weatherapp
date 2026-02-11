@@ -3,7 +3,7 @@
 
 .body {
     /* background: #000; */
-  
+
 }
 
 .nav {
@@ -44,13 +44,33 @@
 }
 
 .searchbar {
-    background: #e03e3e;
+    /* background: #e03e3e; */
     margin-top: 30px;
     margin-left: 60px;
     height: 50px;
     border-radius: 10px;
+
+
+
+
+
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, )
 }
 
+/* .week{
+    background: #323232;
+} */
+
+/* .cards{
+    background: #ff0000;
+} */
 .container {
     background: linear-gradient(to bottom,
             rgba(255, 255, 255, 0.25),
@@ -63,6 +83,15 @@
     /* margin: 20px; */
     /* padding-left: 20px; */
 }
+
+.sidetext {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    margin-left: 10px;
+
+}
+
+.sidemain {}
 
 input {
     /* background: red; */
@@ -82,41 +111,71 @@ input {
     margin-right: auto;
 }
 
+.displayicon {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.05));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, )
+}
+
 
 
 /*  */
 /* Mobile */
 @media (max-width: 767px) {
-  .searchbar {
-    width: 70%;
- 
-  }
+    .searchbar {
+        width: 70%;
+
+    }
+
+    .displayicon {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .searchbar {
-font-size: 1.1rem;
- transform: translate(-35px);
-  }
-   .searchinput{
+    .searchbar {
+        font-size: 1.1rem;
+        transform: translate(-35px);
+    }
+
+    .searchinput {
         font-size: 0.8rem;
     }
-    .btn{
+
+    .btn {
         font-size: 0.9rem;
     }
+      .displayicon {
+        width: 200px;
+        height: 200px;
+    }
+
+
 }
 
 /* Laptop & Desktop */
 @media (min-width: 1024px) {
-  .searchbar {
-    width: 70%;
-    font-size: 0.9rem;
-    transform: translate(-25px);
+    .searchbar {
+        width: 70%;
+        font-size: 0.9rem;
+        transform: translate(-25px);
 
-   
-  }
-   .searchinput{
+
+    }
+
+    .displayicon {
+        width: 200px;
+        height: 200px;
+    }
+
+    .searchinput {
         font-size: 1.2rem;
     }
 }

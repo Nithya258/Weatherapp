@@ -68,7 +68,7 @@ const TodaysHighlights = ({ data }) => {
         </div>
 
         <div className="bg-white/5 rounded-xl p-5 md:p-6">
-          <p className="text-base md:text-3xl text-white mb-3">Air Quality</p>
+          <p className="text-base md:text-3xl text-white mb-3">Air Quality</p><br />
           <p className="text-white text-3xl md:text-4xl font-bold text-center">
             {current.aqius ?? "N/A"}
           </p>

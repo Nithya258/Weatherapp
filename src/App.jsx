@@ -19,7 +19,7 @@ function App() {
   const [tempUnit, setTempUnit] = useState('celsius');
 
   useEffect(() => {
-    dispatch(fetchWeather('mukthinath'));
+    dispatch(fetchWeather('mt kailash'));
   }, [dispatch]);
 
   const backgroundImage = data

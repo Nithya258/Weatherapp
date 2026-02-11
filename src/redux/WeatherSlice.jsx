@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Visual Crossing Weather API key
+
 const API_KEY = 'EJ6UBL2JEQGYB3AA4ENASN62J';
 
 // Async thunk to fetch weather

@@ -1,9 +1,9 @@
 const getPm25Status = (pm) => {
   if (pm <= 12) return "Good";
   if (pm <= 35.4) return "Moderate";
-  if (pm <= 55.4) return "equals to 1 pack of cigaretts a day";
-  if (pm <= 150.4) return "khatam";
-  return "gaya";
+  if (pm <= 55.4) return "precautions must be taken";
+  if (pm <= 150.4) return "constant exposure may be dangerous";
+  return "severe risk";
 };
 
 const AirQuality = ({ pm2p5 }) => {

@@ -29,7 +29,7 @@ const Navigation = ({ activeTab, setActiveTab, tempUnit, setTempUnit }) => {
       <div className="flex gap-2 bg-white/10 rounded-lg p-1">
         <button
           onClick={() => setTempUnit('celsius')}
-          className={`hovering px-6 py-2 rounded-md font-semibold transition-all text-base ${
+          className={` px-6 py-2 rounded-md font-semibold transition-all text-base ${
             tempUnit === 'celsius'
               ? 'bg-white text-blue-900'
               : 'text-white hover:bg-white/20'
