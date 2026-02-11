@@ -30,7 +30,7 @@ const HourlyForecast = ({ data, tempUnit }) => {
               {/* <p className="text-white text-base text-3xl md:text-lg  lg:text-lg mb-2">{time}</p><br /> */}
               <p className="text-white text-sm md:text-lg lg:text-2xl mb-2">{time}</p>
 
-              <img src={icon} alt="weather" className="w-10 h-10 translate-x-10" />
+              <img src={icon} alt="weather" className=" houricon w-10 h-10 " />
               <p className="text-white text-base md:text-lg font-bold">
                 {convertTemp(hour.temp)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
               </p>

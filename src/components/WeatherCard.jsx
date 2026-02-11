@@ -1,6 +1,7 @@
 
-import { FaMapMarkerAlt } from 'react-icons/fa';
+// import { FaMapMarkerAlt } from 'react-icons/fa';
 import { getWeatherAssets } from '../utils/weatherConfig';
+// import { FaMapMarkerAlt } from 'react-icons/fa';
 
 
 const WeatherCard = ({ data, tempUnit, compact = false }) => {
@@ -8,11 +9,11 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
 
 
-console.log("Full data object:", data);
+  console.log("Full data object:", data);
 
-const conditionText = data.currentConditions.conditions;
-console.log(conditionText); 
-// 
+  const conditionText = data.currentConditions.conditions;
+  console.log(conditionText);
+  // 
 
 
 
@@ -35,7 +36,9 @@ console.log(conditionText);
             <img
               src={icon}
               alt="weather"
-              className="lg:w-48 lg:h-48  md:w-12 md:h-12 bg-blue-200 "
+              className="lg:w-70 lg:h-80  md:w-30 md:h-27 sm:w-10 sm:h-10  bg-red-200 "
+
+
             />
           </div>
           <br />
@@ -58,10 +61,10 @@ console.log(conditionText);
 
 
 
-         
-          <p className="text-white text-xl md:text-2xl font-bold capitalize">
-  {data.currentConditions.conditions}
-</p>
+
+              <p className="text-white text-xl md:text-2xl font-bold capitalize">
+                {data.currentConditions.conditions}
+              </p>
 
 
 
@@ -71,7 +74,7 @@ console.log(conditionText);
             </div>
 
             <p className="flex text-xs lg:text-2xl gap-2 px-2 mt-2 ">
-             
+
               <span className="break-words">{data.resolvedAddress}</span>
             </p>
           </div>
@@ -81,9 +84,13 @@ console.log(conditionText);
   }
 
   return (
-    <h2 className="flex items-center justify-center text-xl md:text-2xl text-yellow-200">
-      Plan Accordingly
-    </h2>
+    <>
+      <h2 className="flex items-center justify-center text-xl md:text-2xl text-yellow-200 mt-2">
+        WEATHER FORECAST
+      </h2>
+
+    </>
+
   );
 };
 

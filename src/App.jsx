@@ -27,54 +27,56 @@ function App() {
     : 'https://i.ibb.co/qNv7NxZ/pc.webp';
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="min-h-screen bg-gradient-to-b from-black/40 to-black/60 flex flex-col md:flex-row">
 
-        <Sidebar />
+      <div
+        className="min-h-screen bg-cover bg-center bg-no-repeat  gap "
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="min-h-screen  flex flex-col md:flex-row">
 
-        <div className="w-full md:w-10/12 lg:w-10/12 p-4 md:p-6 lg:p-8 overflow-y-auto">
+          <Sidebar />
 
-          {loading && (
-            <div className="text-white text-center text-xl md:text-2xl">Loading...</div>
-          )}
+          <div className="w-full md:w-10/12 lg:w-10/12 p-4 md:p-6 lg:p-8 overflow-y-auto">
 
-          {error && (
-            <div className="text-red-400 text-center text-base md:text-xl bg-red-900/30 backdrop-blur-md rounded-lg p-4">
-              Error: {error}
-            </div>
-          )}
+            {loading && (
+              <div className="text-white text-center text-xl md:text-2xl">Loading...</div>
+            )}
 
-          {data && !loading && (
-            <>
-              <WeatherCard data={data} tempUnit={tempUnit} />
+            {error && (
+              <div className="text-red-400 text-center text-base md:text-xl bg-red-900/30 backdrop-blur-md rounded-lg p-4">
+                Error: {error}
+              </div>
+            )}
 
-              <Navigation
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-                tempUnit={tempUnit}
-                setTempUnit={setTempUnit}
-              />
+            {data && !loading && (
+              <>
+                <WeatherCard data={data} tempUnit={tempUnit} />
 
-              {activeTab === 'today' ? (
-                <HourlyForecast data={data} tempUnit={tempUnit} />
-                // <WeekForecast data={data} tempUnit={tempUnit} />
+                <Navigation
+                  activeTab={activeTab}
+                  setActiveTab={setActiveTab}
+                  tempUnit={tempUnit}
+                  setTempUnit={setTempUnit}
+                />
 
-              ) : (
-                // <HourlyForecast data={data} tempUnit={tempUnit} />
+                {activeTab === 'today' ? (
+                  <HourlyForecast data={data} tempUnit={tempUnit} />
+                  // <WeekForecast data={data} tempUnit={tempUnit} />
 
-                <WeekForecast data={data} tempUnit={tempUnit} />
-              )}
-              <br /><br />
-              <TodaysHighlights data={data} />
-              <Footer />
-            </>
-          )}
+                ) : (
+                  // <HourlyForecast data={data} tempUnit={tempUnit} />
+
+                  <WeekForecast data={data} tempUnit={tempUnit} />
+                )}
+                <br /><br />
+                <TodaysHighlights data={data} />
+                <Footer />
+              </>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+
   );
 }
 

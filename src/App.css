@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 
-.body{
-  background: #000;
+.body {
+    background: #000;
 }
+
 .nav {
     background: #1d1d1d;
     border-radius: 10px;
@@ -32,7 +33,7 @@
 }
 
 .hovering:hover {
-  background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0);
 }
 
 .week {
@@ -41,13 +42,39 @@
     margin: 1px;
 }
 
+.searchbar {
+    background: #3e4be0;
+    margin-top: 30px;
+    margin-left: 60px;
+    height: 50px;
+    border-radius: 10px;
+}
 
+.container {
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
+input {
+    /* background: red; */
+    height: 50px;
+    border-radius: 10px;
+}
 
+.weekicon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-
-
-
-
-
-
+.houricon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

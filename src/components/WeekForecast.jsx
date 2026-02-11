@@ -30,27 +30,44 @@ const WeekForecast = ({ data, tempUnit }) => {
             //   <img 
             //     src={icon} 
             //     alt="weather" 
-            //     className="w-20 h-20 mx-auto translate-x-5 mb-2 "
+            //     // className="w-20 h-20 mx-auto translate-x-5 mb-2 "
 
-            //     // className="w-20 h-20 md:w-12 md:h-12 mx-auto translate-x-5 lg:translate-x-10 mb-2" 
+            //     className="w-20 h-20 md:w-12 md:h-12 mx-auto translate-x-5 lg:translate-x-10 mb-2" 
             //   />
             //   <p className="text-white text-lg md:text-xl font-bold">
             //     {convertTemp(day.tempmax)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
             //   </p>
             // </div>
 
-            <div key={index} className="week bg-white/5 rounded-xl p-3 md:p-4 text-center">
-              <h3 className="text-white/90 text-xl md:text-sm mb-2">{dayName}</h3>
-              <img
-                src={icon}
-                alt="weather"
-                className="w-20 h-20 md:w-12 md:h-12 mx-auto translate-x-15 lg:translate-x-10 md:translate-x-20 mb-2"
-             
-             />
-              <p className="text-white text-lg md:text-xl font-bold">
-                {convertTemp(day.tempmax)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
-              </p>
-            </div>
+            // <div key={index} className="week bg-white/5 rounded-xl p-3 md:p-4 text-center">
+            //   <h3 className="text-white/90 text-xl md:text-sm mb-2">{dayName}</h3>
+              
+            //   <img
+            //     src={icon}
+            //     alt="weather"
+            //     className=" relative mx-auto w-20 h-20 md:w-12 md:h-12 translate-x-16 mb-2"
+            //   />
+            //   <p className="text-white text-lg md:text-xl font-bold">
+            //     {convertTemp(day.tempmax)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
+            //   </p>
+            // </div>
+
+// 
+<div key={index} className="week bg-white/5 rounded-xl p-3 md:p-4 text-center ">
+  <h3 className="text-white/90 text-xl md:text-sm mb-2">{dayName}</h3>
+
+  <img
+    src={icon}
+    alt="weather"
+    className=" weekicon  w-20 h-20 md:w-12 md:h-12 mb-2"
+  />
+
+  <p className="text-white text-lg md:text-xl font-bold">
+    {convertTemp(day.tempmax)}°{tempUnit === 'fahrenheit' ? 'F' : 'C'}
+  </p>
+</div>
+
+
           );
         })}
       </div>
