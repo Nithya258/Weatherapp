@@ -73,7 +73,7 @@ const WeatherCard = ({ data, tempUnit, compact = false }) => {
 
 
             </div>
-            <br /> <br /><br /><br />
+            <br /> <br /><br /><br /><br /><br /><br /><br />
             <p className=" address flex text-xl text-orange-500 lg:text-2xl gap-2 px-2 mt-2  bg-gray-900">
               <FaMapMarkerAlt /> <br />
               <span className="break-words">{data.resolvedAddress}</span>
